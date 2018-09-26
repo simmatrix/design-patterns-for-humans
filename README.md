@@ -2,16 +2,11 @@
 
 ***
 
-<p align="center">
-🎉 Ultra-simplified explanation to design patterns! 🎉
-</p>
-<p align="center">
+Ultra-simplified explanation to design patterns!
+
 A topic that can easily make anyone's mind wobble. Here I try to make them stick in to your mind (and maybe mine) by explaining them in the <i>simplest</i> way possible.
-</p>
 
 ***
-
-<sub>Check out my [blog](http://kamranahmed.info) and say "hi" on [Twitter](https://twitter.com/kamranahmedse).</sub>
 
 Introduction
 =================
@@ -24,7 +19,7 @@ Wikipedia describes them as
 
 > In software engineering, a software design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. It is not a finished design that can be transformed directly into source or machine code. It is a description or template for how to solve a problem that can be used in many different situations.
 
-⚠️ Be Careful
+Be Careful
 -----------------
 - Design patterns are not a silver bullet to all your problems.
 - Do not try to force them; bad things are supposed to happen, if done so. Keep in mind that design patterns are solutions **to** problems, not solutions **finding** problems; so don't overthink.
@@ -55,7 +50,7 @@ Wikipedia says
  * [Prototype](#-prototype)
  * [Singleton](#-singleton)
 
-🏠 Simple Factory
+Simple Factory
 --------------
 Real world example
 > Consider, you are building a house and you need doors. It would be a mess if every time you need a door, you put on your carpenter clothes and start making a door in your house. Instead you get it made from a factory.
@@ -119,7 +114,7 @@ echo 'Height: ' . $door->getHeight();
 
 When creating an object is not just a few assignments and involves some logic, it makes sense to put it in a dedicated factory instead of repeating the same code everywhere.
 
-🏭 Factory Method
+Factory Method
 --------------
 
 Real world example
@@ -207,7 +202,7 @@ $marketingManager->takeInterview(); // Output: Asking about community building.
 
 Useful when there is some generic processing in a class but the required sub-class is dynamically decided at runtime. Or putting it in other words, when the client doesn't know what exact sub-class it might need.
 
-🔨 Abstract Factory
+Abstract Factory
 ----------------
 
 Real world example
@@ -332,7 +327,7 @@ As you can see the wooden door factory has encapsulated the `carpenter` and the 
 
 When there are interrelated dependencies with not-that-simple creation logic involved
 
-👷 Builder
+Builder
 --------------------------------------------
 Real world example
 > Imagine you are at Hardee's and you order a specific deal, lets say, "Big Hardee" and they hand it over to you without *any questions*; this is the example of simple factory. But there are cases when the creation logic might involve more steps. For example you want a customized Subway deal, you have several options in how your burger is made e.g what bread do you want? what types of sauces would you like? What cheese would you want? etc. In such cases builder pattern comes to the rescue.
@@ -439,7 +434,7 @@ $burger = (new BurgerBuilder(14))
 
 When there could be several flavors of an object and to avoid the constructor telescoping. The key difference from the factory pattern is that; factory pattern is to be used when the creation is a one step process while builder pattern is to be used when the creation is a multi step process.
 
-🐑 Prototype
+Prototype
 ------------
 Real world example
 > Remember dolly? The sheep that was cloned! Lets not get into the details but the key point here is that it is all about cloning
@@ -508,7 +503,7 @@ Also you could use the magic method `__clone` to modify the cloning behavior.
 
 When an object is required that is similar to existing object or when the creation would be expensive as compared to cloning.
 
-💍 Singleton
+Singleton
 ------------
 Real world example
 > There can only be one president of a country at a time. The same president has to be brought to action, whenever duty calls. President here is singleton.
@@ -578,7 +573,7 @@ Wikipedia says
  * [Flyweight](#-flyweight)
  * [Proxy](#-proxy)
 
-🔌 Adapter
+Adapter
 -------
 Real world example
 > Consider that you have some pictures in your memory card and you need to transfer them to your computer. In order to transfer them you need some kind of adapter that is compatible with your computer ports so that you can attach memory card to your computer. In this case card reader is an adapter.
@@ -665,7 +660,7 @@ $hunter = new Hunter();
 $hunter->hunt($wildDogAdapter);
 ```
 
-🚡 Bridge
+Bridge
 ------
 Real world example
 > Consider you have a website with different pages and you are supposed to allow the user to change the theme. What would you do? Create multiple copies of each of the pages for each of the themes or would you just create separate theme and load them based on the user's preferences? Bridge pattern allows you to do the second i.e.
@@ -760,7 +755,7 @@ echo $about->getContent(); // "About page in Dark Black";
 echo $careers->getContent(); // "Careers page in Dark Black";
 ```
 
-🌿 Composite
+Composite
 -----------------
 
 Real world example
@@ -893,7 +888,7 @@ $organization->addEmployee($jane);
 echo "Net salaries: " . $organization->getNetSalaries(); // Net Salaries: 27000
 ```
 
-☕ Decorator
+Decorator
 -------------
 
 Real world example
@@ -1013,7 +1008,7 @@ echo $someCoffee->getCost(); // 20
 echo $someCoffee->getDescription(); // Simple Coffee, milk, whip, vanilla
 ```
 
-📦 Facade
+Facade
 ----------------
 
 Real world example
@@ -1102,7 +1097,7 @@ $computer->turnOn(); // Ouch! Beep beep! Loading.. Ready to be used!
 $computer->turnOff(); // Bup bup buzzz! Haah! Zzzzz
 ```
 
-🍃 Flyweight
+Flyweight
 ---------
 
 Real world example
@@ -1183,7 +1178,7 @@ $shop->serve();
 // Serving tea to table# 5
 ```
 
-🎱 Proxy
+Proxy
 -------------------
 Real world example
 > Have you ever used an access card to go through a door? There are multiple options to open that door i.e. it can be opened either using access card or by pressing a button that bypasses the security. The door's main functionality is to open but there is a proxy added on top of it to add some functionality. Let me better explain it using the code example below.
@@ -1279,7 +1274,7 @@ Wikipedia says
 * [State](#-state)
 * [Template Method](#-template-method)
 
-🔗 Chain of Responsibility
+Chain of Responsibility
 -----------------------
 
 Real world example
@@ -1382,7 +1377,7 @@ $bank->pay(259);
 // Paid 259 using Bitcoin!
 ```
 
-👮 Command
+Command
 -------
 
 Real world example
@@ -1498,7 +1493,7 @@ $remote->submit($turnOff); // Darkness!
 
 Command pattern can also be used to implement a transaction based system. Where you keep maintaining the history of commands as soon as you execute them. If the final command is successfully executed, all good otherwise just iterate through the history and keep executing the `undo` on all the executed commands.
 
-➿ Iterator
+Iterator
 --------
 
 Real world example
@@ -1604,7 +1599,7 @@ foreach($stationList as $station) {
 $stationList->removeStation(new RadioStation(89)); // Will remove station 89
 ```
 
-👽 Mediator
+Mediator
 ========
 
 Real world example
@@ -1676,7 +1671,7 @@ $jane->send('Hey!');
 // Feb 14, 10:58 [Jane]: Hey!
 ```
 
-💾 Memento
+Memento
 -------
 Real world example
 > Take the example of calculator (i.e. originator), where whenever you perform some calculation the last calculation is saved in memory (i.e. memento) so that you can get back to it and maybe get it restored using some action buttons (i.e. caretaker).
@@ -1765,7 +1760,7 @@ $editor->restore($saved);
 $editor->getContent(); // This is the first sentence. This is second.
 ```
 
-😎 Observer
+Observer
 --------
 Real world example
 > A good example would be the job seekers where they subscribe to some job posting site and they are notified whenever there is a matching job opportunity.   
@@ -1854,7 +1849,7 @@ $jobPostings->addJob(new JobPost('Software Engineer'));
 // Hi Jane Doe! New job posted: Software Engineer
 ```
 
-🏃 Visitor
+Visitor
 -------
 Real world example
 > Consider someone visiting Dubai. They just need a way (i.e. visa) to enter Dubai. After arrival, they can come and visit any place in Dubai on their own without having to ask for permission or to do some leg work in order to visit any place here; just let them know of a place and they can visit it. Visitor pattern lets you do just that, it helps you add places to visit so that they can visit as much as they can without having to do any legwork.
@@ -1993,7 +1988,7 @@ $dolphin->accept($speak);  // Tuut tutt tuutt!
 $dolphin->accept($jump);   // Walked on water a little and disappeared
 ```
 
-💡 Strategy
+Strategy
 --------
 
 Real world example
@@ -2066,7 +2061,7 @@ $sorter = new Sorter(new QuickSortStrategy());
 $sorter->sort($dataset); // Output : Sorting using quick sort
 ```
 
-💢 State
+State
 -----
 Real world example
 > Imagine you are using some drawing application, you choose the paint brush to draw. Now the brush changes its behavior based on the selected color i.e. if you have chosen red color it will draw in red, if blue then it will be in blue etc.  
@@ -2160,7 +2155,7 @@ $editor->type('Fifth line');
 // fifth line
 ```
 
-📒 Template Method
+Template Method
 ---------------
 
 Real world example
@@ -2274,21 +2269,3 @@ $iosBuilder->build();
 // Deploying ios build to server
 ```
 
-## 🚦 Wrap Up Folks
-
-And that about wraps it up. I will continue to improve this, so you might want to watch/star this repository to revisit. Also, I have plans on writing the same about the architectural patterns, stay tuned for it.
-
-## 👬 Contribution
-
-- Report issues
-- Open pull request with improvements
-- Spread the word
-- Reach out with any feedback [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/kamranahmedse.svg?style=social&label=Follow%20%40kamranahmedse)](https://twitter.com/kamranahmedse)
-
-## Sponsored By
-
-- [Highig - Think and its done](http://highig.com/)
-
-## License
-
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
